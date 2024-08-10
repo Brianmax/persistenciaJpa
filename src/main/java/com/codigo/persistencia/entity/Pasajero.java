@@ -1,6 +1,6 @@
 package com.codigo.persistencia.entity;
 
-import com.codigo.persistencia.repository.PasajeroRepository;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,6 +19,7 @@ public class Pasajero {
     private String nombre;
     private String apellido;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "pasajero")
-    private List<Boleto> boletos;
+    private List<BoletoEntity> boletoEntities;
 }

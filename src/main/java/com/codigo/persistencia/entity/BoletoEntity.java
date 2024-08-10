@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 @Table(name = "boletos")
 @Entity
-public class Boleto {
+public class BoletoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_boleto")
@@ -18,4 +18,8 @@ public class Boleto {
     @ManyToOne
     @JoinColumn(name = "id_pasajero")
     private Pasajero pasajero;
+
+    // usuarioCreacion
+    // fecha creacion
+    // fecha modificacion
 }
