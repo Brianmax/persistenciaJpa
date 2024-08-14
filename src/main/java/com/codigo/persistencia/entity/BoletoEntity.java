@@ -19,6 +19,10 @@ public class BoletoEntity {
     @JoinColumn(name = "id_pasajero")
     private Pasajero pasajero;
 
+    @ManyToOne
+    @JoinColumn(name = "id_vuelo")
+    private VueloEntity vueloEntity;
+
     // usuarioCreacion
     // fecha creacion
     // fecha modificacion
